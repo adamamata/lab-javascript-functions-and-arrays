@@ -6,9 +6,8 @@ function maxOfTwoNumbers(num1, num2) {
   else if (num1 < num2) {
       return num2;
   }
-  else {
-      return num1 && num2; 
-  }
+  return num1; 
+
 }
 
 // Iteration #2: Find longest word
@@ -82,7 +81,9 @@ function averageWordLength(array){
 
 
 // Bonus - Iteration #4.1
-function avg() {}
+function avg(array) {
+  if (!array.length) return null;
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
