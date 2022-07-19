@@ -15,9 +15,7 @@ function maxOfTwoNumbers(num1, num2) {
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
 function findLongestWord(array){
-  if (array.length === 0) {
-    return null;
-  }
+  if (!array.length) return null;
   let longestWordCount = 0
   let longestWord = "";
   for (let i = 0; i < array.length; i++){
@@ -36,13 +34,19 @@ const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 function sumNumbers(array){ 
     let sum = 0;
     array.forEach(element => {
-        sum += element
+        sum += Number(element);
     })
     return sum;
 }
 
-// Iteration #3.1 Bonus:
-function sum() {}
+// Iteration #3.2 Bonus:
+function sum(array) {
+  let sum = 0;
+  array.forEach((element) => {
+      sum += Number(element);
+  })
+  return sum;
+}
 
 
 
@@ -51,9 +55,7 @@ function sum() {}
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(array){
-  if (array.length === 0) {
-    return null;
-  }
+  if (!array.length) return null;
   let average = 0;
   let sum = 0;
   array.forEach(element => {
@@ -68,9 +70,7 @@ function averageNumbers(array){
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
 function averageWordLength(array){
-  if (array.length === 0) {
-    return null;
-  }
+  if (!array.length) return null;
   let average = 0;
   let sum = 0;
   array.forEach((element) => {
@@ -100,10 +100,8 @@ const wordsUnique = [
 ];
 
 function uniquifyArray(array) {
+  if (!array.length) return null;
   newArray = new Array();
-  if (array.length === 0){
-    return null; 
-  }
   for (let i = 0; i < array.length; i++){
     if (!newArray.includes(array[i])) {
       newArray.push(array[i]);
@@ -118,9 +116,7 @@ function uniquifyArray(array) {
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
 function doesWordExist(array, word) {
-  if (array.length === 0) {
-    return null;
-  }
+  if (!array.length) return null;
   if (array.includes(word)){
     return true;
   }
