@@ -41,9 +41,7 @@ function sumNumbers(array){
 // Iteration #3.2 Bonus:
 function sum(array) {
   let sum = 0;
-  array.forEach((element) => {
-      sum += Number(element);
-  })
+  array.forEach((element) => {sum += Number(element);})
   return sum;
 }
 
@@ -123,8 +121,6 @@ function doesWordExist(array, word) {
   }
   return false;
 }
-
-
 
 // Iteration #7: Count repetition
 const wordsCount = [
