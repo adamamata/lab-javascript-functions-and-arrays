@@ -100,7 +100,16 @@ const wordsUnique = [
 ];
 
 function uniquifyArray(array) {
-  newArray = [];
+  newArray = new Array();
+  if (array.length === 0){
+    return null; 
+  }
+  for (let i = 0; i < array.length; i++){
+    if (!newArray.includes(array[i])) {
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
 }
 
 
@@ -127,7 +136,9 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(array) {
+  count = 0;
+}
 
 
 
